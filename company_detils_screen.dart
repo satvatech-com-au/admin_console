@@ -1,9 +1,9 @@
+
+
 import 'dart:io';
 
-import 'package:camera/camera.dart';
+import 'package:admin_console/screens/transaction_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:hr_potal/screens/camear.dart';
-import 'package:hr_potal/screens/transaction_screen.dart';
 import 'package:image_picker/image_picker.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -218,4 +218,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
       });
     }
   }
+
+
 }
