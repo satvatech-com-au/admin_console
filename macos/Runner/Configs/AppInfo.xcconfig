@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = admin_console
+PRODUCT_NAME = hrportal
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = au.com.satvatech.app.adminConsole
+PRODUCT_BUNDLE_IDENTIFIER = com.example.hrportal
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 au.com.satvatech.app. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.

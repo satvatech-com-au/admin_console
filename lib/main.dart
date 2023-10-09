@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:admin_console/src/screens/billing.dart';
+import 'package:hr_portal/src/views/admin_login.dart';
 
-void main() {
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // final status = await Permission.storage.request();
+  // if (status.isGranted) {
+
+  // } else {}
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +19,9 @@ class MyApp extends StatelessWidget {
       title: 'HR portal',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade500),
-        useMaterial3: true,
+        primaryColor: Colors.blue.shade100,
       ),
-      home: const BillingScreen(),
+      home: const AdminLoginScreen(),
     );
   }
 }

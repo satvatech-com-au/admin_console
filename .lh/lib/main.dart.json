@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1696866022143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1696866022143,
+            "name": "Commit-0",
+            "content": "import 'package:admin_console/src/screens/billing.dart';\nimport 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(const MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  const MyApp({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      title: 'HR portal',\n      debugShowCheckedModeBanner: false,\n      theme: ThemeData(\n        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade500),\n        useMaterial3: true,\n      ),\n      home: const BillingScreen(),\n    );\n  }\n}\n"
+        }
+    ]
+}

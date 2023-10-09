@@ -1,6 +1,6 @@
-# admin_console
+# hrportal
 
-Admin Console cross platform application
+A new Flutter project.
 
 ## Getting Started
 

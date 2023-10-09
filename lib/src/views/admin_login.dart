@@ -1,10 +1,8 @@
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import 'dashboard.dart';
+import 'package:hr_portal/src/views/dashboard.dart';
 
 class AdminLoginScreen extends StatefulWidget {
-  const AdminLoginScreen({super.key});
+  const AdminLoginScreen({Key? key}) : super(key: key);
 
   @override
   State<AdminLoginScreen> createState() => _LogInState();
@@ -16,20 +14,6 @@ class _LogInState extends State<AdminLoginScreen> {
   final _passwordController = TextEditingController();
 
   bool showPassword = false;
-
-  // Future signIn() async {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return const Center(
-  //           child: CircularProgressIndicator(),
-  //         );
-  //       });
-
-  // await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //     email: _emailController.text.trim(),
-  //     password: _passwordController.text.trim());
-  // }
 
   @override
   void dispose() {
@@ -61,7 +45,11 @@ class _LogInState extends State<AdminLoginScreen> {
                   alignment: Alignment.topLeft,
                   child: Text(
                     'Welcome, admin',
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -69,16 +57,17 @@ class _LogInState extends State<AdminLoginScreen> {
                 ),
                 const Text(
                   'Kindly log in to proceed',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, color: Colors.black54),
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(vertical: 50),
+                  margin: const EdgeInsets.symmetric(vertical: 30),
                   height: 60,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 7),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(20)),
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   child: TextFormField(
                     controller: _emailController,
                     decoration: const InputDecoration(
@@ -98,11 +87,12 @@ class _LogInState extends State<AdminLoginScreen> {
                 Container(
                   height: 60,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 7),
-                  margin: const EdgeInsets.only(bottom: 50),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+                  margin: const EdgeInsets.only(bottom: 30),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(20)),
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   child: TextFormField(
                     controller: _passwordController,
                     obscureText: !showPassword,
@@ -123,13 +113,11 @@ class _LogInState extends State<AdminLoginScreen> {
                             showPassword = !showPassword;
                           });
                         },
-                        child: showPassword
-                            ? const Icon(
-                                Icons.visibility_off,
-                              )
-                            : const Icon(
-                                Icons.visibility,
-                              ),
+                        child: Icon(
+                          showPassword
+                              ? Icons.visibility_off
+                              : Icons.visibility,
+                        ),
                       ),
                     ),
                   ),
@@ -138,23 +126,28 @@ class _LogInState extends State<AdminLoginScreen> {
                   width: double.infinity,
                   height: 55,
                   child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue.shade100,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Dashboard()));
-                      },
-                      child: const Text(
-                        'Log in',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade200,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Dashboard(),
                         ),
-                      )),
+                      );
+                    },
+                    child: const Text(
+                      'Log in',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),

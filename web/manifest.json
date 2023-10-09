@@ -1,11 +1,11 @@
 {
-    "name": "admin_console",
-    "short_name": "admin_console",
+    "name": "hrportal",
+    "short_name": "hrportal",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Admin Console cross platform application",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
