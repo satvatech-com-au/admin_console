@@ -86,7 +86,7 @@ class _ProductCardState extends State<ProductCard> {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => const DetailsScreen(
+              builder: (context) => DetailsScreen(
                     selectedIndex: 0,
                   ))),
       child: Container(
