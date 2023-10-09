@@ -108,7 +108,7 @@ class _productCardState extends State<productCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(selectedIndex: 0,))),
+      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen())),
       child: Container(
        height: 100,
        width: double.infinity,

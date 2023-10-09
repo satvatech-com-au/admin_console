@@ -1,7 +1,7 @@
 
-
-import 'package:admin_console/screens/camear.dart';
+import 'package:admin_console/screens/transaction_screen.dart';
 import 'package:admin_console/widget/clients.dart';
+import 'package:admin_console/widget/company_detils_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  Clients(),
+        home:  DetailsScreen(),
       ),
     );
   }
